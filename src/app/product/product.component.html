@@ -1,0 +1,28 @@
+<div>
+  <h2> Product </h2>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="enter product name" [(ngModel)]="product" />        
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="enter product price" [(ngModel)]="price" />
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="onClick()">
+            <span class="glyphicon glyphicon-ok">Save</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <ul class="list-group">
+    <li *ngFor="let item of productList;let i=index" class="list-group-item">
+      <span style="padding-right: 5px"> {{ item.product }} </span>
+      <span style="padding-right: 5px"> {{ item.price }} </span>
+      <a (click)="removeProduct(i)">Remove</a>
+    </li>
+  </ul>
+
+</div>

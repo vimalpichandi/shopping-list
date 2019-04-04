@@ -1,0 +1,10 @@
+<div>
+  <h2> Product List</h2>
+  <ul class="list-group">
+    <li *ngFor="let item of productList;let i=index" class="list-group-item">
+      <span style="padding-right: 5px"> {{ item.product }} </span>
+      <span style="padding-right: 5px"> {{ item.price }} </span>
+      <!-- <a (click)="removeProduct(i)">Remove</a> -->
+    </li>
+  </ul>
+</div>
